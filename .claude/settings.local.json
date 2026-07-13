@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/bin/**)",
+      "Bash(command -v python3.12 python3.11 python3.13)",
+      "Bash(python3 -m pip --version)",
+      "Bash(python3 -m venv --help)",
+      "Skill(claude-api)",
+      "Bash(.venv/bin/uvicorn backend.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(echo \"backend pid $!\")",
+      "Bash(curl -s http://127.0.0.1:8000/api/health)",
+      "Bash(break)",
+      "Bash(npm run *)",
+      "Bash(echo \"next pid $!\")",
+      "Bash(curl -s -D - -o /dev/null -H \"Origin: http://localhost:3000\" http://127.0.0.1:8000/api/claims)",
+      "Bash(curl -s -o /dev/null -w \"home HTTP %{http_code}\\\\n\" http://localhost:3000/)"
+    ]
+  }
+}

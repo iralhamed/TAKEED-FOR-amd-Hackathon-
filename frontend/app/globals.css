@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-cairo);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
